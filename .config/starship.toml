@@ -1,0 +1,139 @@
+format = """
+[](#5E81AC)\
+$os\
+$username\
+[](bg:#81A1C1 fg:#5E81AC)\
+$directory\
+[](fg:#81A1C1 bg:#A3BE8C)\
+$git_branch\
+$git_status\
+[](fg:#A3BE8C bg:#D08770)\
+$c\
+$elixir\
+$elm\
+$golang\
+$gradle\
+$haskell\
+$java\
+$dotnet\
+$julia\
+$nodejs\
+$nim\
+$rust\
+$scala\
+[](fg:#D08770 bg:#BF616A)\
+$docker_context\
+[](fg:#BF616A bg:#B48EAD)\
+$time\
+[ ](fg:#B48EAD)\
+"""
+
+# Disable the blank line at the start of the prompt
+# add_newline = false
+
+[username]
+show_always = true
+style_user = "fg:#ECEFF4 bg:#5E81AC"
+style_root = "fg:#ECEFF4 bg:#5E81AC"
+format = '[$user ]($style)'
+disabled = false
+
+[os]
+style = "bg:#5E81AC"
+disabled = true 
+
+[directory]
+style = "fg:#2E3440 bg:#81A1C1"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[c]
+symbol = " "
+style = "fg:#ECEFF4 bg:#D08770"
+format = '[ $symbol ($version) ]($style)'
+
+[docker_context]
+symbol = " "
+style = "fg:#ECEFF4 bg:#BF616A"
+format = '[ $symbol $context ]($style)'
+
+[elixir]
+symbol = " "
+style = "fg:#ECEFF4 bg:#D08770"
+format = '[ $symbol ($version) ]($style)'
+
+[elm]
+symbol = " "
+style = "fg:#ECEFF4 bg:#D08770"
+format = '[ $symbol ($version) ]($style)'
+
+[git_branch]
+symbol = ""
+style = "fg:#2E3440 bg:#A3BE8C"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "fg:#2E3440 bg:#A3BE8C"
+format = '[$all_status$ahead_behind ]($style)'
+
+[golang]
+symbol = " "
+style = "fg:#ECEFF4 bg:#D08770"
+format = '[ $symbol ($version) ]($style)'
+
+[gradle]
+style = "fg:#ECEFF4 bg:#D08770"
+format = '[ $symbol ($version) ]($style)'
+
+[haskell]
+symbol = " "
+style = "fg:#ECEFF4 bg:#D08770"
+format = '[ $symbol ($version) ]($style)'
+
+[java]
+symbol = " "
+style = "fg:#ECEFF4 bg:#D08770"
+format = '[ $symbol ($version) ]($style)'
+
+[dotnet]
+symbol = ""
+style = "fg:#ECEFF4 bg:#D08770"
+format = '[ $symbol ($version) ]($style)'
+
+[julia]
+symbol = " "
+style = "fg:#ECEFF4 bg:#D08770"
+format = '[ $symbol ($version) ]($style)'
+
+[nodejs]
+symbol = ""
+style = "fg:#ECEFF4 bg:#D08770"
+format = '[ $symbol ($version) ]($style)'
+
+[nim]
+symbol = "󰆥 "
+style = "fg:#ECEFF4 bg:#D08770"
+format = '[ $symbol ($version) ]($style)'
+
+[rust]
+symbol = ""
+style = "fg:#ECEFF4 bg:#D08770"
+format = '[ $symbol ($version) ]($style)'
+
+[scala]
+symbol = " "
+style = "fg:#ECEFF4 bg:#D08770"
+format = '[ $symbol ($version) ]($style)'
+
+[time]
+disabled = false
+time_format = "%R" 
+style = "fg:#ECEFF4 bg:#B48EAD"
+format = '[ ♥ $time ]($style)'
