@@ -1,0 +1,39 @@
+
+# Git status
+s() {
+    git status
+}
+
+# Git log
+l() {
+    git log
+}
+
+lga() {
+    git log --all --oneline --graph --date-order --max-count=15
+}
+
+lg() {
+    git log --graph --date-order -C -M --pretty=format:"<%h> %ad [%an] %Cgreen%d%Creset %s" --all --date=short --max-count=15
+}
+
+la() {
+    git log --oneline --all --max-count=10
+}
+
+lp() {
+    git log -p
+}
+
+# Git branch
+b() {
+    git branch
+}
+
+bc() {
+    git checkout -b "$@"
+}
+
+c() {
+    git checkout "$@"
+}

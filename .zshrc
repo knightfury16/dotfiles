@@ -17,3 +17,6 @@ export PATH="$PATH:/Users/suhaibknight/.dotnet/tools"
 # setting for *world, press tab to autocomplete to helloWorld
 setopt extended_glob
 
+
+# Git Aliases
+source ~/.git-aliases
