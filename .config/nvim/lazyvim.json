@@ -3,6 +3,7 @@
     "lazyvim.plugins.extras.editor.mini-files",
     "lazyvim.plugins.extras.editor.refactoring",
     "lazyvim.plugins.extras.lang.omnisharp",
+    "lazyvim.plugins.extras.test.core",
     "lazyvim.plugins.extras.util.dot"
   ],
   "install_version": 8,
