@@ -20,3 +20,10 @@ setopt extended_glob
 
 # Git Aliases
 source ~/.git-aliases
+
+# Yazi editor variable
+export EDITOR="nvim"
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
