@@ -18,8 +18,6 @@ export PATH="$PATH:/Users/suhaibknight/.dotnet/tools"
 setopt extended_glob
 
 
-# Git Aliases
-source ~/.git-aliases
 
 # Yazi editor variable
 export EDITOR="nvim"
@@ -27,6 +25,36 @@ export EDITOR="nvim"
 # Completion styling
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+
+# Aliases start
+alias ls='ls --color'
+alias vim='nvim'
+
+# Git Aliases
+source ~/.git-aliases
+
+# Aliases end
+
+# Keybindings start
+bindkey '^p' history-search-backward 
+bindkey '^n' history-search-forward
+# Keybindings end
+
+
+# History settings start
+HISTSIZE=5000 # history size
+HISTFILE=~/.zsh_history # History file location
+SAVEHIST=$HISTSIZE
+HISTDUP=erase # Delete duplicate command from history
+setopt appendhistory
+setopt sharehistory # Share history among all sessions
+setopt hist_ignore_space # Add a space before from saving it to history
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt hist_ignore_dups
+setopt hist_find_no_dups
+# History settings end
+
 
 # Load Angular CLI autocompletion.
 source <(ng completion script)
