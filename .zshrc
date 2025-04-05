@@ -61,3 +61,6 @@ setopt hist_find_no_dups
 
 # Load Angular CLI autocompletion.
 source <(ng completion script)
+
+# Shell integrations
+eval "$(fzf --zsh)"
