@@ -3,6 +3,9 @@ eval "$(starship init zsh)"
 # zsh-autosuggestions settings
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+# zsh-syntax highlighting settings
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 # zoxide - Smart directory hopper
 eval "$(zoxide init zsh)"
 
