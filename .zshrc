@@ -6,6 +6,12 @@ source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # zsh-syntax highlighting settings
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# Load completions
+autoload -Uz compinit && compinit
+
+# fzf tab completion
+source /Users/suhaibknight/.local/share/fzf-tab/fzf-tab.plugin.zsh
+
 # zoxide - Smart directory hopper
 eval "$(zoxide init zsh)"
 
@@ -28,6 +34,9 @@ export EDITOR="nvim"
 # Completion styling
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+zstyle ':completion:*' menu no
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
+zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # Aliases start
 alias ls='ls --color'
