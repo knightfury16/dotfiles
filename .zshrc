@@ -46,11 +46,17 @@ alias vim='nvim'
 source ~/.git-aliases
 
 # Aliases end
+#
+
+# Keybind mode 
+bindkey -e
 
 # Keybindings start
 bindkey '^p' history-search-backward 
 bindkey '^n' history-search-forward
+bindkey '^f' autosuggest-accept
 # Keybindings end
+
 
 
 # History settings start
@@ -73,3 +79,4 @@ source <(ng completion script)
 
 # Shell integrations
 eval "$(fzf --zsh)"
+
