@@ -1,3 +1,4 @@
+echo -e "\033[32mHello, Master!\033[0m"
 # Check for Homebrew on macOS and initialize if found
 if [[ -f "/opt/homebrew/bin/brew" ]] then
   # If you're using macOS, you'll want this enabled
