@@ -26,6 +26,7 @@ $docker_context\
 [](fg:#BF616A bg:#B48EAD)\
 $time\
 [ ](fg:#B48EAD)\
+$line_break$character
 """
 
 # Disable the blank line at the start of the prompt
@@ -134,6 +135,11 @@ format = '[ $symbol ($version) ]($style)'
 
 [time]
 disabled = false
-time_format = "%R" 
+time_format = "%H:%M %p" 
 style = "fg:#ECEFF4 bg:#B48EAD"
-format = '[ ♥ $time ]($style)'
+format = '[ $time ]($style)'
+
+[character]
+disabled = false
+success_symbol = '[](bold fg:#98971a)'
+error_symbol = '[](bold fg:#cc241d)'
