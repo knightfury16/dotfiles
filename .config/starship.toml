@@ -21,11 +21,10 @@ $nodejs\
 $nim\
 $rust\
 $scala\
-[](fg:#D08770 bg:#BF616A)\
-$docker_context\
-[](fg:#BF616A bg:#B48EAD)\
+[](fg:#D08770 )\
+$fill\
 $time\
-[ ](fg:#B48EAD)\
+$cmd_duration\
 $line_break$character
 """
 
@@ -133,11 +132,18 @@ symbol = " "
 style = "fg:#ECEFF4 bg:#D08770"
 format = '[ $symbol ($version) ]($style)'
 
+[fill]
+symbol = " "
+
 [time]
-disabled = false
-time_format = "%H:%M %p" 
-style = "fg:#ECEFF4 bg:#B48EAD"
-format = '[ $time ]($style)'
+disabled = true
+time_format = "%I:%M %p" 
+style = "fg:#ECEFF4 bg:#88C0D0"
+format = '[ $time ](bold yellow )'
+
+[cmd_duration]
+min_time = 500
+format = 'took [$duration](bold yellow) '
 
 [character]
 disabled = false
