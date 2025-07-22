@@ -2,7 +2,7 @@
 
 check_for_tests(){
     local dir="$1"
-    echo "Checking for test project in $dir"
+    echo "🔍 Checking for test projects in: $dir"
 
     # Look for test files
     local test_files=$(find "$dir" -maxdepth 2 -type f  \(\
@@ -15,13 +15,13 @@ check_for_tests(){
         \) 2>/dev/null)
 
     if [[ -n "$test_files" ]]; then
-        echo "Test project found"
+        echo "✅ Test project(s) found:"
         echo "$test_files" | while read -r file; do
             echo " -$(basename $file)" 
         done
         return 0
     else
-        echo "No test project found"
+        echo "❌ No test projects found"
         return 1
     fi
 }
@@ -53,6 +53,10 @@ main() {
     local currentDirectory=$(pwd)
     testFound=false
 
+    echo "🚀 .NET Test Runner"
+    echo "=================="
+    echo
+
     # try running test on current directory
     try_run_test $currentDirectory
 
@@ -67,6 +71,9 @@ main() {
 
     try_run_test $parentdirectory
 
+    echo "========================================="
+    echo "✅ All tests completed successfully!"
+    echo "Press any key to exit..."
     read -n1 -s
     return 0
 }
