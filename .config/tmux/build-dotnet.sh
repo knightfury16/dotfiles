@@ -24,6 +24,15 @@ if find "$current_dir" -maxdepth 1 -type f \( -name "*.csproj" -o -name "*.fspro
     if dotnet build; then
         echo "----------------------------------------"
         echo "✅ Build completed successfully!"
+        echo
+        echo "Press r to run the project"
+        read -r run
+        if [[ $run == 'r' ]]; then
+            echo "Running the project: "
+            dotnet run --no-build 2>&1
+        else
+            exit 0
+        fi
     else
         echo "----------------------------------------"
         echo "❌ Build failed!"
