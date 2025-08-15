@@ -109,6 +109,7 @@ alias fd='find . -type d -name'
 alias dfh='df -h'  # Disk usage in human-readable format
 alias duh='du -h'  # Directory usage in human-readable format
 alias free='free -h'  # Memory usage in human-readable format
+alias llg='ll | grep '
 # Process management
 alias psg='ps aux | grep -v grep | grep -i'  # Process search
 # Quick edit of common config files
@@ -124,6 +125,7 @@ source ~/.git-aliases                  # Load git aliases from separate file
 # Exports section start
 export PATH="$PATH:/Users/suhaibknight/.dotnet/tools"  # Add .NET tools to PATH
 export EDITOR="nvim"                                   # Set default editor to neovim
+export DOTNET_ROOT=$(dirname $(which dotnet))
 # Exports section end
 
 # Shell integrations start
